@@ -1,1 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe da Assunção Advocacia | Serviços Jurídicos em Caieiras/SP</title>
+    <meta name="description" content="Escritório de Advocacia em Caieiras/SP. Atendimento especializado, ético e transparente. Mais de 2 anos de experiência. Agende sua consulta.">
+    <style>
+        /* Reset e Configurações Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 12px; /* Fonte pequena conforme solicitado */
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #8B4513;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container Principal */
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #2c3e50;
+            color: #fff;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #8B4513;
+        }
+
+        .logo h1 {
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .logo p {
+            font-size: 10px;
+            color: #bdc3c7;
+        }
+
+        /* Relógio Online */
+        #relogio {
+            background-color: #8B4513;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        /* Navegação */
+        nav {
+            background-color: #ecf0f1;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            font-weight: 600;
+            color: #2c3e50;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+
+        nav ul li a:hover {
+            color: #8B4513;
+        }
+
+        /* Banner Principal com Imagem */
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2070&auto=format&fit=crop'); /* Imagem de fundo similar à enviada */
+            background-size: cover;
+            background-position: center;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+        }
+
+        .hero p {
+            font-size: 13px;
+            max-width: 600px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+        }
+
+        /* Seções de Conteúdo */
+        section {
+            padding: 30px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        section h3 {
+            font-size: 16px;
+            color: #2c3e50;
+            border-left: 4px solid #8B4513;
+            padding-left: 10px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Grid para Serviços */
+        .grid-servicos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .card-servico {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 4px;
+            transition: transform 0.2s;
+        }
+
+        .card-servico:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .card-servico h4 {
+            font-size: 13px;
+            color: #8B4513;
+            margin-bottom: 5px;
+        }
+
+        .card-servico p {
+            font-size: 11px;
+            color: #555;
+        }
+
+        /* Listas e Tópicos */
+        ul.lista-topicos {
+            list-style-type: square;
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        ul.lista-topicos li {
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+
+        /* Informações de Contato e Localização */
+        .info-contato {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-contato div {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .info-contato p {
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+
+        .info-contato strong {
+            color: #2c3e50;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            text-align: center;
+            padding: 20px;
+            font-size: 10px;
+        }
+
+        footer a {
+            color: #ecf0f1;
+        }
+
+        /* Política de Privacidade (Texto Longo) */
+        .politica-texto {
+            font-size: 11px;
+            color: #555;
+            text-align: justify;
+        }
+
+        .politica-texto h4 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .hero h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1>Felipe da Assunção Sociedade Individual de Advocacia</h1>
+            <p>CNPJ: 69.202.172/0001-44 | OAB/SP</p>
+        </div>
+        <div id="relogio">Carregando data e hora...</div>
+    </header>
+
+    <!-- Navegação -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#quem-somos">Quem Somos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#localizacao">Localização</a></li>
+            <li><a href="#contato">Contato</a></li>
+            <li><a href="#privacidade">Política de Privacidade</a></li>
+        </ul>
+    </nav>
+
+    <!-- Home / Banner -->
+    <section id="home" class="hero">
+        <div>
+            <h2>Defendendo seus direitos com ética e competência</h2>
+            <p>Há mais de 2 anos oferecendo soluções jurídicas personalizadas em Caieiras/SP e região. Compromisso, transparência e resultados.</p>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos">
+        <h3>Quem Somos</h3>
+        <p>O escritório <strong>Felipe da Assunção Sociedade Individual de Advocacia</strong>, registrado sob o CNPJ 69.202.172/0001-44, foi fundado com o propósito de oferecer um atendimento jurídico humanizado, ágil e de alta qualidade. Com mais de 2 anos de atuação consolidada no mercado, nossa banca é liderada por profissionais experientes e dedicados à defesa intransigente dos interesses de nossos clientes.</p>
+        <br>
+        <p>Localizados estrategicamente na Região Central de Caieiras/SP, atendemos tanto pessoas físicas quanto jurídicas, sempre pautados pela ética, pela transparência e pelo rigor técnico que a advocacia exige. Nosso compromisso é traduzir a complexidade do Direito em soluções práticas e eficazes para o seu caso.</p>
+        
+        <h4 style="margin-top: 15px; margin-bottom: 5px; font-size: 12px; color: #8B4513;">Nossos Diferenciais:</h4>
+        <ul class="lista-topicos">
+            <li>Atendimento personalizado e focado nas necessidades do cliente.</li>
+            <li>Transparência total em relação a prazos e honorários.</li>
+            <li>Equipe em constante atualização jurídica.</li>
+            <li>Mais de 2 anos de experiência prática e casos de sucesso.</li>
+        </ul>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+        <h3>Nossos Serviços</h3>
+        <p>Atuamos de forma abrangente nas principais áreas do Direito, oferecendo consultoria preventiva e contenciosa. Conheça nossas especialidades:</p>
+        
+        <div class="grid-servicos">
+            <div class="card-servico">
+                <h4>Direito Civil</h4>
+                <p>Contratos, responsabilidade civil, direitos do consumidor, cobranças, indenizações e ações de família (divórcio, pensão, guarda).</p>
+            </div>
+            <div class="card-servico">
+                <h4>Direito Trabalhista</h4>
+                <p>Defesa de empregados e empregadores. Reclamações trabalhistas, horas extras, rescisões, acordos e consultoria preventiva.</p>
+            </div>
+            <div class="card-servico">
+                <h4>Direito Previdenciário</h4>
+                <p>Aposentadorias, auxílios, revisões de benefícios e planejamento previdenciário junto ao INSS.</p>
+            </div>
+            <div class="card-servico">
+                <h4>Direito Empresarial</h4>
+                <p>Assessoria jurídica para empresas, constituição de sociedades, contratos empresariais e recuperação de crédito.</p>
+            </div>
+            <div class="card-servico">
+                <h4>Direito Penal</h4>
+                <p>Defesa criminal em todas as fases do processo, acompanhamento de inquéritos e habeas corpus.</p>
+            </div>
+            <div class="card-servico">
+                <h4>Consultoria Jurídica</h4>
+                <p>Análise de riscos, pareceres jurídicos e orientação preventiva para evitar litígios futuros.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Localização -->
+    <section id="localizacao">
+        <h3>Localização e Atendimento</h3>
+        <div class="info-contato">
+            <div>
+                <p><strong>Endereço:</strong><br>
+                Praça Santo Antônio, 9 - Sala 06<br>
+                Região Central<br>
+                Caieiras - SP<br>
+                CEP: 07700-177</p>
+                <br>
+                <p><strong>Horário de Atendimento:</strong><br>
+                Segunda a Sexta, das 09h às 18h.</p>
+                <p><strong>Atendimento Online:</strong> Disponível mediante agendamento.</p>
+            </div>
+            <div>
+                <p><strong>Para Correspondência:</strong><br>
+                Felipe da Assunção Sociedade Individual de Advocacia<br>
+                Praça Santo Antônio, 9, Sala 06<br>
+                Região Central - Caieiras/SP<br>
+                CEP: 07700-177</p>
+                <br>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=Praça+Santo+Antônio,+9,+Caieiras,+SP" target="_blank">📍 Ver no Google Maps</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+        <h3>Contato</h3>
+        <p>Entre em contato conosco para agendar uma consulta ou tirar dúvidas. Responderemos o mais breve possível.</p>
+        <br>
+        <div class="info-contato">
+            <div>
+                <p><strong>Telefone / WhatsApp:</strong><br>
+                (11) 98168-3955</p>
+                <p><a href="https://wa.me/5511981683955" target="_blank">💬 Chamar no WhatsApp</a></p>
+            </div>
+            <div>
+                <p><strong>E-mail:</strong><br>
+                alaordiasdetre@gmail.com</p>
+                <p><a href="mailto:alaordiasdetre@gmail.com">✉️ Enviar E-mail</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Política de Privacidade -->
+    <section id="privacidade">
+        <h3>Política de Privacidade</h3>
+        <div class="politica-texto">
+            <p>A <strong>Felipe da Assunção Sociedade Individual de Advocacia</strong>, inscrita no CNPJ 69.202.172/0001-44, valoriza a sua privacidade. Esta política descreve como coletamos, usamos e protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018).</p>
+            
+            <h4>1. Coleta de Informações</h4>
+            <p>Coletamos apenas as informações necessárias para a prestação de serviços jurídicos, como nome, e-mail, telefone e dados relacionados ao caso, fornecidos voluntariamente por você através de nossos canais de contato.</p>
+            
+            <h4>2. Uso das Informações</h4>
+            <p>Seus dados são utilizados exclusivamente para: (a) responder às suas solicitações; (b) fornecer consultoria jurídica; (c) cumprir obrigações legais e regulatórias; e (d) enviar comunicações relacionadas aos serviços contratados.</p>
+            
+            <h4>3. Compartilhamento de Dados</h4>
+            <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. O compartilhamento ocorre apenas quando necessário para a execução dos serviços (ex: tribunais, órgãos públicos) ou por exigência legal.</p>
+            
+            <h4>4. Segurança</h4>
+            <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados, perda ou destruição. No entanto, nenhum sistema é totalmente seguro, e recomendamos que você também adote práticas seguras ao navegar na internet.</p>
+            
+            <h4>5. Seus Direitos</h4>
+            <p>Você tem o direito de solicitar a confirmação da existência de tratamento, acesso, correção, anonimização ou eliminação de seus dados pessoais. Para exercer esses direitos, entre em contato conosco pelo e-mail: alaordiasdetre@gmail.com.</p>
+            
+            <h4>6. Cookies</h4>
+            <p>Nosso site pode utilizar cookies para melhorar a experiência de navegação. Você pode configurar seu navegador para recusar cookies, mas isso pode afetar algumas funcionalidades do site.</p>
+            
+            <p style="margin-top: 10px;"><em>Última atualização: Outubro de 2024.</em></p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Felipe da Assunção Sociedade Individual de Advocacia. Todos os direitos reservados.</p>
+        <p>CNPJ: 69.202.172/0001-44 | OAB/SP</p>
+        <p>Este site tem caráter meramente informativo, em conformidade com o Código de Ética e Disciplina da OAB.</p>
+    </footer>
+</div>
+
+<!-- Script do Relógio Online -->
+<script>
+    function atualizarRelogio() {
+        const agora = new Date();
+        
+        // Formatação da Data
+        const dia = String(agora.getDate()).padStart(2, '0');
+        const mes = String(agora.getMonth() + 1).padStart(2, '0'); // Janeiro é 0
+        const ano = agora.getFullYear();
+        
+        // Formatação da Hora
+        const horas = String(agora.getHours()).padStart(2, '0');
+        const minutos = String(agora.getMinutes()).padStart(2, '0');
+        const segundos = String(agora.getSeconds()).padStart(2, '0');
+        
+        const dataFormatada = `${dia}/${mes}/${ano}`;
+        const horaFormatada = `${horas}:${minutos}:${segundos}`;
+        
+        document.getElementById('relogio').innerHTML = `📅 ${dataFormatada} | 🕒 ${horaFormatada}`;
+    }
+
+    // Atualiza a cada segundo
+    setInterval(atualizarRelogio, 1000);
+    // Chama imediatamente para não esperar 1 segundo
+    atualizarRelogio();
+</script>
+
+</body>
+</html>
